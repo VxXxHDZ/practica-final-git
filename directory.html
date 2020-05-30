@@ -1,0 +1,165 @@
+
+<html>
+
+<HEAD>
+<title>Links en HTML</title>
+<body bgcolor=#ffffff>
+</HEAD>
+
+</BODY>
+<br>
+<br>
+<center>
+<font size=+3 color=#0000ff>L</font><font size=+2 color=#0000ff>inks en HTML</font><BR>
+</center>
+<BR>
+<BR>
+Una de las ventajas de HTML es que permite enlazar varios textos de manera
+din&aacute;mica. Este <I>enlace</I> se denomina <B>Link</B>. <BR>
+Un link
+es una referencia (una manera de llegar) desde la p&aacute;gina actual
+a otra p&aacute;gina que puede estar
+en el mismo directorio, en otro directorio o a&uacute;n en otro computador.
+Incluso, es posible hacer un link a una parte espec&iacute;fica 
+<I>dentro</I> de otra p&aacute;gina.
+<BR>
+<BR>
+<a name="general"><font size=+2 color=#0000ff><i>Forma General de un Link</i></font></a><BR>
+<img src="barra.jpg">
+<BR>
+Para insertar un link en un texto HTML se utiliza el comando 
+<TT>&lt;A></TT> (de <I>anchor</I>). <BR>
+Este comando tiene <I>modificadores</I>,
+es decir, no basta con colocar el comando, es necesario especificarle
+ciertos par&aacute;metros. Uno de estos par&aacute;metros es 
+<TT>HREF</TT> con el cual le indicamos hacia <I>d&oacute;nde</I> debe
+seguir el link. Con <TT>&lt;/A></TT> terminamos el comando, 
+y lo que queda encerrado entre <TT>&lt;A></TT> y <TT>&lt;/A></TT> 
+quedar&aacute; <U>subrayado</U> indicando que es un link.<BR>
+
+Por ejemplo, un link simple a otra p&aacute;gina HTML es
+<PRE>
+	&lt;A HREF="otra_pagina.html"> Este es un link &lt;/A>
+</PRE>
+
+Y se ver&aacute; como<BR>
+<A HREF="otra_pagina.html"> Este es un link </A>
+<BR>
+<BR>
+
+<a name="llocales"><font size=+2 color=#0000ff><i>Links Locales</i></font></a><BR>
+<img src="barra.jpg">
+<BR>
+Como en el ejemplo anterior, un link puede hacer referencia hacia un archivo
+en el mismo directorio. Sin embargo, si el archivo al cual queremos 
+referenciar esta en otro directorio, podemos especificarlo en el
+modificador <TT>HREF</TT> utilizando <B>..</B> como el directorio
+<I>padre</I>, y <TT>/</TT> como separador de directorios.<BR>
+
+Por ejemplo, si el archivo est&aacute; en el directorio padre:
+<PRE>
+	&lt;A HREF="../otra_pagina.html">Este archivo esta en el directorio padre &lt;/A>
+</PRE>
+
+lo cual aparece como <BR>
+<A HREF="../otra_pagina.html">Este archivo esta en el directorio padre</A>
+<BR>
+<BR>
+
+Ahora, si el archivo est&aacute; en el directorio <I>textos</I> (subdirectorio
+del directorio donde estamos):
+<PRE>
+	&lt;A HREF="textos/otra_pagina.html">Este archivo esta en el subdirectorio textos &lt;/A>
+</PRE>
+
+lo cual aparece como <BR>
+<A HREF="textos/otra_pagina.html">Este archivo esta en el subdirectorio textos</A>
+<BR>
+<BR>
+
+<a name="url"><font size=+2 color=#0000ff><i>URL Uniform Resource Location</i></font></a><BR>
+<img src="barra.jpg">
+<BR>
+Una forma m&aacute;s general de especificar c&uacute;l ser&aacute; el 
+texto a seguir por el link, es utilizando una <B>URL</B>. Los dos
+tipos de URL m&aacute;s utilizados son:
+<BR>
+<BR>
+
+<a name="urlhttp"><font size=+1 color=#0000ff><i>URL de documento HTML</i></font>
+</a>
+<BR>
+<BR>
+Si queremos especificar una p&aacute;gina en el comutador <B>xxx.yyy.zzz</B>, 
+que est&aacute; en el directorio <B>/AA/BB/CC/DD/</B>, y se llama
+<B>pagina.html</B>, el URL ser&aacute;
+<PRE>
+	http://xxx.yyy.zzz/AA/BB/CC/DD/pagina.html
+</PRE>
+Y por ende, un link a este documento ser&aacute;
+<PRE>
+	&lt;A HREF="http://xxx.yyy.zzz/AA/BB/CC/DD/pagina.html"> Esta es una pagina en otro computador &lt;/A>
+</PRE>
+Lo cual se ve como
+<P><A HREF="http://xxx.yyy.zzz/AA/BB/CC/DD/pagina.html"> Esta es una pagina en otro computador </A>
+<BR>
+<BR>
+
+<a name="urlftp"><font size=+1 color=#0000ff><i>URL de archivo FTP</i></font>
+</a>
+<BR>
+<BR>
+Es posible hacer un link a un archivo de un servidor FTP an&oacute;nimo. 
+Esto hace que, cuando el <I>browser</I> siga el link, en vez de mostrar
+una p&aacute;gina, <I>traer&aacute;</I> el archivo se&ntilde;alado.<BR>
+<BR>
+Por ejemplo, si queremos colocar un link para que se pueda 
+traer el antivirus <B>Scan</B> para Win95 desde <B>sunsite.dcc.uchile.cl</B>
+que est&aacute; en el directorio <B>/pub/OS/msdos/antivirus/mcafee/</B>
+hacemos:
+<BR>
+<PRE>
+	&lt;A HREF="ftp://sunsite.dcc.uchile.cl/pub/OS/msdos/antivirus/mcafee/v95i207e.zip"> Antivirus Scan para Win95 &lt;/A>
+</PRE>
+Lo cual se ve como
+<P> <A HREF="ftp://sunsite.dcc.uchile.cl/pub/OS/msdos/antivirus/mcafee/v95i207e.zip"> Antivirus Scan para Win95 </A>
+<BR>
+<BR>
+
+<a name="secciones"><font size=+2 color=#0000ff><i>Link a una Secci&oacute;n</i></font></a><BR>
+<img src="barra.jpg">
+<BR>
+<BR>
+Es posible referenciar directamente a una secci&oacute;n de una p&aacute;gina.
+Para eso, debemos darle un nombre a la secci&oacute;n de la 
+p&aacute;gina que referenciaremos con el comando
+<TT>&lt;A NAME="nombre"></TT> donde <I>nombre</I> es un nombre arbitrario 
+(se debe cerrar con <TT>&lt;/A></TT>). Supongamos que esta p&aacute;gina
+se llama <B>pagina.html</B><BR>
+Luego, el link que apuntar&aacute; a esta secci&oacute;n podr&iacute;a ser
+<PRE>
+	&lt;A HREF="pagina.html#nombre">Link a una secci&oacute;n de la p&aacute;gina &lt;/A>
+</PRE>
+Lo cual se ve como
+<P><A HREF="pagina.html#nombre"> Link a una secci&oacute;n de la p&aacute;gina 
+</A>
+<BR>
+<BR>
+
+<a name="mailto"><font size=+2 color=#0000ff><i>Mail to: Envio de Mail</i></font></a>
+<img src="barra.jpg">
+<BR>
+<BR>
+Es posible colocar un link especial que permite enviar un mail 
+a la direcci&oacute;n indicada. Por ejemplo:
+<BR>
+<PRE>
+	&lt;A HREF="mailto:ahevia@mi.direccion.de.email">Enviame un mail! 
+&lt;/A>
+</PRE>
+Se ve como
+<P> <A HREF="mailto:ahevia@mi.direccion.de.email">Enviame un mail! &lt;/A>
+<BR>
+<BR>
+</BODY>
+</HTML>
